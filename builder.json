@@ -1,0 +1,19 @@
+{
+  "project": "vc_prj",
+  "platform": "ios",
+  "github": {
+    "owner": "DataEra1",
+    "repo": "v_c"
+  },
+  "provider": "github",
+  "codemagic": {},
+  "bitrise": {},
+  "ios": {},
+  "flutter": {
+    "version": "3.47.5",
+    "watch": {}
+  },
+  "reactNative": {},
+  "kmp": {},
+  "mobai": {}
+}
