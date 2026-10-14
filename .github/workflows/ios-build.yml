@@ -320,6 +320,14 @@ jobs:
         if: steps.detect.outputs.type == 'flutter'
         run: flutter pub get
 
+      - name: Generate iOS platform files if missing
+        if: steps.detect.outputs.type == 'flutter'
+        run: |
+          if [ ! -d ios ]; then
+            echo "No ios/ directory; generating it with flutter create"
+            flutter create --platforms=ios .
+          fi
+
       # setup-node cannot make `with:` keys conditional, so the version and the
       # version file are both computed here; it ignores an empty version file.
       - name: Resolve JS toolchain
